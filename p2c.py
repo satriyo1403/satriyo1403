@@ -45,7 +45,6 @@ def main():
          print("EEW Message : %s" %(eews_message))
          if sent2cube == 0 :
             print(" Sending eews message into eews sender ") 
-            #os.system('curl --user budi:budi123 --upload-file %s ftp://192.168.1.16/' %(eews_message))
             os.system('curl --user eews:1111 --upload-file %s ftp://172.19.1.62/' %(eews_message))
             sent2cube = 1
             extr_eews_msg = open(eews_message, "r")
@@ -108,7 +107,7 @@ def main():
             os.system("php %s " %(push2android))
 
             #### Sending data other EEW Sender Server
-            os.system('curl --user budi:budi123 --upload-file %s ftp://182.253.200.19/' %(eews_message))
+            os.system('curl --user xxxx:xxxx --upload-file %s ftp://xxx.xxx.xxx.xx/' %(eews_message))
             ### Backup event_xml_file
             os.system("more %s > %s" %(xml_report,xml_rep_bakup))
             os.system("mv %s*.rep %s " %(path_repfile,path_backup_file))
