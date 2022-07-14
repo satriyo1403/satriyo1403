@@ -75,8 +75,8 @@ def main():
             #### generate xml file ####
             os.system("echo '<?xml version="'"1.0"'" encoding="'"utf-8"'" ?>' > %s" %(xml_report))
             os.system('echo "<earthquake>" >> %s' %(xml_report))
-            os.system('echo "   <identifier>BMKG-EEW-%s%s%s%s%s%s</identifier>" >> %s' %(tahun,dec_bulan,dec_tnggl,dec_jam,dec_menit,dec_detik,xml_report))
-            os.system('echo "   <schemaVer>IA-BMKG-XML-EEW:1.0</schemaVer>" >> %s' %(xml_report))
+            os.system('echo "   <identifier>EEW-%s%s%s%s%s%s</identifier>" >> %s' %(tahun,dec_bulan,dec_tnggl,dec_jam,dec_menit,dec_detik,xml_report))
+            os.system('echo "   <schemaVer>XML-EEW:1.0</schemaVer>" >> %s' %(xml_report))
             os.system('echo "   <language>en-US</language>" >> %s' %(xml_report))
             os.system('echo "   <event>Earthquake</event>" >> %s' %(xml_report))
             os.system('echo "   <senderName>Data Center</senderName>" >> %s' %(xml_report))
